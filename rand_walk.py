@@ -12,9 +12,6 @@ import numpy as np
 from PIL import Image
 import cv2
 from random import choice
-from perlin_noise import PerlinNoise
-
-noise = PerlinNoise()
 
 SPEED = 500 #walks per frame
 BRIGHTNESS = 10
@@ -24,9 +21,6 @@ pos = (DIMS[0]//2,DIMS[1]//2)
 options = [(-1,0), (1,0), (0,-1), (0,1)]
 
 choice_function = choice
-#op_len = len(options)
-#def choice_function(arr):
-#    return arr[int(((op_len*noise(i/NUM_WALKS))+1)/2)]
 
 images = []
 img = Image.new("RGB", DIMS)
